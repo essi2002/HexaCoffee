@@ -1,6 +1,7 @@
 .container-fluid.main{
   position: relative; /* To make the navbar positions relative to this container */
   padding: 0;
+  max-height: 820px;
 }
 
 .navbar-default {
@@ -72,13 +73,7 @@
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./coffee-2.jpg");
 }
 
-.carousel .background.b {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.pexels.com/photos/93750/pexels-photo-93750-large.jpeg");
-}
 
-.carousel .background.c {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.pexels.com/photos/76827/bahia-ocean-bay-boat-76827-large.jpeg");
-}
 
 .carousel-fade .carousel-inner .item {
   opacity: 0;

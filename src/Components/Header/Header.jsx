@@ -18,8 +18,7 @@ function Header() {
   <div  className="carousel carousel-fade slide">
     <div className="carousel-inner" role="listbox">
     <div class="item active background a"></div>
-      <div class="item background b"></div>
-      <div class="item background c"></div>
+    
     </div>
   </div>
    
