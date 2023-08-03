@@ -6,8 +6,8 @@ import React, { Component } from 'react';
 function App() {
   return (
     <React.Fragment>
-<Header/>
-     <Products Category='Warm' data={productsData}/>
+      <Header/>
+      <Products Category='Warm' data={productsData}/>
 
     </React.Fragment>
      

@@ -13,7 +13,7 @@ export const productsData = [
     desc:
       'Ice, Espresso, Whole Milk, Sugar, Flavored Syrup',
     price: '$3.25',
-    button: 'Add to Cart'
+    button: 'remove'
   },
   {
     img: product2,
@@ -22,7 +22,7 @@ export const productsData = [
     desc:
       'Ice, Cold Milk, Vanilla Syrup, Caramel Sauce, Espresso',
     price: '$4.15',
-    button: 'Add to Cart'
+    button: 'remove'
   },
   {
     img: product3,
@@ -31,7 +31,7 @@ export const productsData = [
     desc:
       'Espresso, Hot Water',
     price: '$2.25',
-    button: 'Add to Cart'
+    button: 'remove'
   }
 ];
 
@@ -43,7 +43,7 @@ export const productsDataTwo = [
     desc:
       'Belgian chocolate glazed donuts covered in icing with sprinkles on top',
     price: '$9.99',
-    button: 'Add to Cart'
+    button: 'remove'
   },
   {
     img: sweet3,
@@ -52,7 +52,7 @@ export const productsDataTwo = [
     desc:
       'Vanilla ice cream covered with caramel and chocolate glaze topped with a coco stick',
     price: '$12.99',
-    button: 'Add to Cart'
+    button: 'remove'
   },
   {
     img: sweet1,
@@ -61,6 +61,6 @@ export const productsDataTwo = [
     desc:
       'Double fudge brownie squares topped with white chocolate pieces and macadamia nuts',
     price: '$9.99',
-    button: 'Add to Cart'
+    button: 'remove'
   }
 ];

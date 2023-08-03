@@ -64,12 +64,12 @@
   background: #e31837;
   color: #fff;
   transition: 0.2 ease-out;
-
-  
-  }
-  .ProductButton :hover {
+  &:hover {
     background: #7d4e2d;
     transition: 0.2s ease-out;
     cursor: pointer;
     color: #000;
   }
+  
+  }
+ 
