@@ -28,7 +28,7 @@ function Header() {
       <h3 className="subtitle">A Tidy, Clean, Easy-to-Use, and Responsive coffee shop with Humble waiters</h3>
     </div>
     <div className="col-xs-12 explore">
-      <a href="#home"><button type="button" className="btn btn-lg explorebtn">Menu</button></a>
+     
     </div>
   </div>
   

@@ -1,22 +1,23 @@
+import {Routes,Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
-import Products from './Components/Products/Product';
-import { productsData, productsDataTwo } from './Components/Products/data'
+
+
+import Admin from './Components/Admin/Admin';
 import React, { Component } from 'react';
 
-function App() {
-  return (
-    <React.Fragment>
+class App extends Component {
+  
+  render() { 
+    return ( 
+      <React.Fragment>
       <Header/>
-      <Products Category='Warm' data={productsData}/>
-
-    </React.Fragment>
-     
-      
-     
-      
-    
-    
-  );
+      <Routes>
+        <Route path='/admin' Component={Admin}/>
+      </Routes>
+      </React.Fragment>
+     );
+  }
 }
-
+ 
 export default App;
+
