@@ -1,10 +1,17 @@
 import React from 'react';
 
+import './Admin.css'
+import ModalCategory from './ModalCategory';
 const Admin = () => {
     return (  
-        <div>
+  <div>
+    <nav>
+      <ModalCategory/>
+    </nav> 
+    <div className='Container'>
 
-        </div>
+    </div>
+   </div>
     );
 }
  

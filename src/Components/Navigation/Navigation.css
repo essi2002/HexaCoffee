@@ -38,7 +38,7 @@ ul {
 
 
 
-li a {
+li p {
   color: #fff;
   text-decoration: none;
   padding: 45px 45px;
@@ -226,7 +226,7 @@ nav {
   }
   
   
-  li a {
+  li p {
     padding: 34px 34px;
     font-size: 23px;
     font-weight: lighter;
@@ -391,5 +391,5 @@ nav {
 
 .Active {
   
-  margin-top: 1px;
+  margin-top: 0.5px;
 }

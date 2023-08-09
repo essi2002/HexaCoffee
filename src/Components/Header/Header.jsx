@@ -1,19 +1,41 @@
 import React from 'react';
 import './Header.css'
-import Navigation from '../Navigation/Navigation';
 
 
+import {Link } from 'react-router-dom';
 
 
+import '../Navigation/Navigation.css'
 
 function Header() {
 
 
   return (
     <div className="container-fluid main">
+      
+    
+      <nav>
+        <ul class="nav-type">
+        <Link to='/adminmenu'>
+          <li><p className='active'>Admin</p></li>
+        </Link>
+        <Link to='/usermenu' >
+          <li><p className='active1'>User</p></li>
+        </Link>
+        <Link to='/admin'>
+          <li><p className='active2'>About</p></li>
+        </Link>
 
+       
+    
+
+          
+          <div class="line"></div>
+          
+        </ul>
+      </nav>
+      
   
-   <Navigation/>
   
   <div  className="carousel carousel-fade slide">
     <div className="carousel-inner" role="listbox">

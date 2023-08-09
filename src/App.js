@@ -1,4 +1,4 @@
-import {Routes,Route } from 'react-router-dom';
+import {BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
 
 
@@ -9,12 +9,16 @@ class App extends Component {
   
   render() { 
     return ( 
-      <React.Fragment>
-      <Header/>
+     
+    <Router> 
+     
       <Routes>
-        <Route path='/admin' Component={Admin}/>
+      <Route path='/' element={<Header/>}/>
+      <Route path='/adminmenu' element={<Admin/>}/>
+      
       </Routes>
-      </React.Fragment>
+   </Router> 
+    
      );
   }
 }
