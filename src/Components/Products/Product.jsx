@@ -3,7 +3,11 @@ import './product.css'
 const Products = ({Category,data}) => {
     return (
         <div className='ProductsContainer'>
-           <h1 style={{fontStyle :'italic'}} className='ProductsHeading'>{Category}</h1>
+          width:100vw;
+  min-height: 100vh;
+  padding: 5rem calc((100vw - 1300px) / 2);
+  background: gray;
+  color: #fff;
            <div className='ProductWrapper'>
             {data.map((product,index)=>{
                 return(

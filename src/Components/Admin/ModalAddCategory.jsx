@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap';
 import { useState ,useRef} from 'react';
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
-import './ModalCategory.css'
+import './ModalAddCategory.css'
 const ModalCategory = () => {
     const [show, setShow] = useState(false);
     const [nameCategory,setName] = useState('')

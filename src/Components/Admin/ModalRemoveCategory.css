@@ -1,9 +1,9 @@
-   
-.addCategory {
+  
+button{
   
     margin-top: 1rem;
     margin-left: 7rem;
-    background:#666ed8;
+    background:darkcyan;
     padding:20px 25px;
     border:none;
     font-size:22px;
