@@ -11,9 +11,7 @@ import { Link } from 'react-router-dom';
 const Admin = () => {
   const [categories, setCategories] = useState([]);
   const [menuItems, setMenuItems] = useState({});
-  const RemoveItem = async () =>{
-
-  };
+  
 
 
 
@@ -40,8 +38,28 @@ const Admin = () => {
       console.error(error);
     }
   };
-
+/*
+  const RemoveItem = async (menuItem) =>{
+    const formData = new FormData();
+    formData.append('name', menuItem.name);
+    formData.append('picture', menuItem.picture);
+    formData.append('ingredients', menuItem.ingredients);
+    formData.append('price', menuItem.price);
+    formData.append('category',menuItem.category)
+    formData.append('size', menuItem.size);
+    formData.append('coffeeCombination', menuItem.coffeeCombination);
   
+    await fetch('/adminmenu/',{
+      method:'DELETE',
+      headers:{
+        'Content-Type': 'application/json',
+      },
+      body:JSON.stringify(Object.fromEntries(formData))
+      
+    });
+    await getMenu();
+  };
+  */
   useEffect(() => {
     const fetchMenuData = async () => {
       await getMenu();
@@ -81,7 +99,7 @@ const Admin = () => {
                            <h2 className='ProductTitle'>{menuitem.name}</h2>
                            <p className='ProductDesc'>{menuitem.ingredients}</p>
                            <p className='ProductPrice'>{menuitem.price}</p>
-                           <button className='ProductButton' onClick={RemoveItem}>Remove Item</button>
+                           <button className='ProductButton'>Remove Item</button>
                         </div>
                     </div>
 
