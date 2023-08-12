@@ -4,33 +4,44 @@ import { useState ,useRef} from 'react';
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
 import './ModalAddCategory.css'
-const ModalCategory = () => {
+
+const ModalCategory = ({ getMenu }) => {
     const [show, setShow] = useState(false);
-    const [nameCategory,setName] = useState('')
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    
+   
+    const handleClose = () => {
+   
+      setShow(false)
+     
+    };
+    const handleShow = () => {
+     
+      setShow(true);
+    }
 
     const inputRef = useRef();
 
     const handleSubmit = async () =>{
        const inputValue = inputRef.current.value;
-       setName(inputValue);
+       
+       
       let response = await fetch(`/adminmenu/`,
        {
         method:"POST",
         headers:{
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ body: nameCategory })
+        body: JSON.stringify({ body: inputValue })
        }
        );
        console.log(response);
+       getMenu();
        handleClose();
     };
     return (
       <>
         
-        <button onClick={handleShow} className='addCategory'> add Category</button>
+        <button onClick={handleShow} className='addCategory'> +</button>
         <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>Add category</Modal.Title>

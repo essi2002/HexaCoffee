@@ -4,6 +4,8 @@ import Header from './Components/Header/Header';
 
 import Admin from './Components/Admin/Admin';
 import React, { Component } from 'react';
+import Order from './Components/Admin/Order';
+
 
 class App extends Component {
   
@@ -15,7 +17,7 @@ class App extends Component {
       <Routes>
       <Route path='/' element={<Header/>}/>
       <Route path='/adminmenu' element={<Admin/>}/>
-      
+      <Route path='/adminmenu/Order' element={<Order/>}/>
       </Routes>
    </Router> 
     
