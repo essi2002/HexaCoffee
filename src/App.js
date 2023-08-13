@@ -5,6 +5,7 @@ import Header from './Components/Header/Header';
 import Admin from './Components/Admin/Admin';
 import React, { Component } from 'react';
 import Order from './Components/Admin/Order';
+import Customer from './Components/Admin/Customer';
 
 
 class App extends Component {
@@ -13,11 +14,12 @@ class App extends Component {
     return ( 
      
     <Router> 
-     
+      
       <Routes>
-      <Route path='/' element={<Header/>}/>
-      <Route path='/adminmenu' element={<Admin/>}/>
-      <Route path='/adminmenu/Order' element={<Order/>}/>
+      <Route path='/' Component={Header}/>
+      <Route path='/adminmenu' Component={Admin}/>
+      <Route path='/adminmenu/Order' Component={Order}/>
+      <Route path='/adminmenu/Order/customer' Component={Customer}/>
       </Routes>
    </Router> 
     
