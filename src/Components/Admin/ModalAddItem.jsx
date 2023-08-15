@@ -6,7 +6,7 @@ import { Form } from 'react-bootstrap';
 import './ModalAddItem.css'
 
 
-const ModalAddItem = ({name, getMenu }) => {
+const ModalAddItem = ({category, getMenu }) => {
     const [show, setShow] = useState(false);
   
     const handleClose = () =>{
@@ -31,25 +31,25 @@ const ModalAddItem = ({name, getMenu }) => {
       const nameOf = inputName.current.value;
       const ingredients = inputIngredients.current.value;
       const price = inputPrice.current.value;
-      const picture = inputImage.current.files[0];
+      const pic = inputImage.current.value[0];
       const size = selectSize.current.value;
       const coffee = selectCoffee.current.value;
     
       const formData = new FormData();
       formData.append('name', nameOf);
-      formData.append('picture', picture);
+      formData.append('pic',pic)
       formData.append('ingredients', ingredients);
       formData.append('price', price);
-      formData.append('category',name)
+      formData.append('category',category)
       formData.append('size', size);
       formData.append('coffeeCombination', coffee);
     
        await fetch('/adminmenu/', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(Object.fromEntries(formData)),
+          // headers: {
+          //   'Content-Type': 'application/json',
+          //  },
+          body:formData, //JSON.stringify(Object.fromEntries(formData)),
       });
       getMenu();
       handleClose();
@@ -69,7 +69,7 @@ const ModalAddItem = ({name, getMenu }) => {
           <Modal.Title>Add MenuItem</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form enctype="multipart/form-data">
             
             <Form.Group
             
@@ -79,6 +79,8 @@ const ModalAddItem = ({name, getMenu }) => {
               <Form.Label>name</Form.Label>
               <Form.Control  as="textarea" rows={1} ref={inputName}  />
             </Form.Group>
+
+
             <Form.Group controlId="exampleForm.ControlInput2">
               <Form.Label>Upload Picture</Form.Label>
               <Form.Control type="file" accept="image/*" ref={inputImage} />
@@ -86,6 +88,9 @@ const ModalAddItem = ({name, getMenu }) => {
                 Please select an image file (jpg, png, gif).
               </Form.Text>
             </Form.Group>
+
+
+
             <Form.Group
             
               className="mb-3"

@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 import './ModalRemoveCategory.css';
 
-const ModalRemoveCategory = ({ name, getMenu}  ) => {
+const ModalRemoveCategory = ({ category, getMenu}  ) => {
   const [show, setShow] = useState(false);
  
 
@@ -26,7 +26,7 @@ const ModalRemoveCategory = ({ name, getMenu}  ) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ body: name }), // Send the name in the request body
+      body: JSON.stringify({ body: category }), // Send the name in the request body
     });
     getMenu();
     handleClose();

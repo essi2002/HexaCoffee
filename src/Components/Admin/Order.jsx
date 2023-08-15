@@ -150,6 +150,7 @@ const Order = () => {
                             >
                               +
                             </button>
+                            <span >{selectedItem.quantity}</span>
                             <button
                               className="ProductButton"
                               onClick={() => handleDecreaseQuantity(menuitem)}
@@ -162,7 +163,7 @@ const Order = () => {
                             >
                               DELETE
                             </button>
-                            <span>{selectedItem.quantity}</span>
+                            
                           </>
                         )}
                         {!isItemSelected(menuitem) && !selectedItem && (

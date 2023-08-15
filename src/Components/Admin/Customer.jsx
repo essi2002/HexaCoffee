@@ -31,6 +31,18 @@ const Customer = () => {
 
   const [customers, setCustomers] = useState([]);
 
+const addOrder = async() =>{
+  const formData = new FormData();
+  formData.append('phoneNumber',phoneNumber);
+  formData.append('items',receiptData);
+   const response = await fetch('adminmenu/Order/customer',{
+    method:'POST',
+    headers:{
+      'Content-Type': 'application/json',
+    },
+    body:JSON.stringify(Object.fromEntries(formData)),
+   })
+}
 const getCustomers = async () => {
   try {
     const response = await fetch('/adminmenu/Order/customer', {
@@ -109,6 +121,7 @@ useEffect(() => {
       setShowSecondForm(false);
       setIsHeaderVisible(false);
       setReceipt(true);
+      addOrder();
     } else {
       
       console.log('Customer not found');
@@ -134,6 +147,7 @@ useEffect(() => {
     setShowSecondForm(false);
     setShowFirstForm(false);
     setReceipt(true);
+    addOrder();
   };
 
 

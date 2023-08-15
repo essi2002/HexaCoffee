@@ -2,9 +2,10 @@
 .addCategory {
   
     margin-top: 1rem;
-    margin-left: 7rem;
+    margin-left: 0rem;
+    float: left;
     background:darkmagenta;
-    padding:20px 25px;
+    padding:10px 25px;
     border:none;
     font-size:22px;
     border-radius:6px;
